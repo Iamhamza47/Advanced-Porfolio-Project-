@@ -8,4 +8,6 @@ Experience Section: Highlights of my work experience and internships.
 Projects Section: Showcase of my key web development projects.
 Skills Section: Visual representation of my technical skills.
 Contact Section: A contact form and links to my social media profiles (LinkedIn, GitHub, Email).
-.# Advanced-Porfolio-Project-
+A responsive, user-friendly personal portfolio website to showcase my skills, experience, and projects. This site includes sections for an introduction, experience, technical skills, and contact information, all built using HTML, CSS, and JavaScript. 
+# Porfolio-project
+# Advanced-Porfolio-Project-
