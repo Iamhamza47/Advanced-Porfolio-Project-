@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Hamza - Portfolio</title>
+    <!-- Add Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 50px;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header nav ul {
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+            margin-top: 60px;
+        }
+
+        section h2,
+        section h3 {
+            margin-bottom: 15px;
+        }
+
+        section#home {
+            text-align: center;
+        }
+
+        section#home h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        section#skills .skill {
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .project,
+        .experience-item {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        form input,
+        form textarea,
+        form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .active-page {
+            display: block;
+        }
+
+        /* Contact Icons Styling */
+        .contact-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .contact-icons li {
+            font-size: 2rem;
+        }
+
+        .contact-icons a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-icons a:hover {
+            color: #0077b5; /* LinkedIn blue */
+        }
+
+        .contact-icons .github:hover {
+            color: #333; /* GitHub grey */
+        }
+
+        .contact-icons .email:hover {
+            color: #d14836; /* Gmail red */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+                <li><a href="#" onclick="showPage('experience')">Experience</a></li>
+                <li><a href="#" onclick="showPage('projects')">Projects</a></li>
+                <li><a href="#" onclick="showPage('skills')">Skills</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="page active-page">
+        <h1>Welcome to My Portfolio!</h1>
+        <p>I'm Muhammad Hamza, a passionate web developer and digital marketer.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="page">
+        <h2>About Me</h2>
+        <p>I am a graduate in Metallurgy and Materials Engineering, transitioning into software development and digital marketing. I'm eager to apply my technical skills and creativity in new challenges.</p>
+        <h3>Education Timeline</h3>
+        <ul id="timeline"></ul>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="page">
+        <h2>Work Experience</h2>
+        <div class="experience-item">
+            <h3>CodeAlpha - Frontend Developer Intern</h3>
+            <p><strong>Duration:</strong> Oct 2024 - Nov 2024</p>
+            <p>Developed an interactive image gallery using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Sevenstar Marketing - Social Media Intern</h3>
+            <p><strong>Duration:</strong> Sep 2024 - Oct 2024</p>
+            <p>Assisted in content creation for social media platforms like Facebook, Instagram, and LinkedIn.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="page">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Frontend Web Development Project</h3>
+            <p>Created a functional calculator using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project">
+            <h3>Interactive Image Gallery</h3>
+            <p>Developed an interactive image gallery using HTML, CSS, and JavaScript.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="page">
+        <h2>My Skills</h2>
+        <div class="skill">
+            <h3>HTML</h3>
+            <div class="progress-bar">
+                <span style="width: 90%; background-color: #4caf50;"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h3>CSS</h3>
+            <div class="progress-bar">
+                <span style="width: 85%; background-color: #4caf50;"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h3>JavaScript</h3>
+            <div class="progress-bar">
+                <span style="width: 80%; background-color: #4caf50;"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h3>React</h3>
+            <div class="progress-bar">
+                <span style="width: 70%; background-color: #4caf50;"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div>
+            <h3>Connect with Me</h3>
+            <ul class="contact-icons">
+                <li><a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Muhammad Hamza</p>
+    </footer>
+
+    <script>
+        // Education Timeline data
+        const timelineData = [
+            { year: "2022", event: "Graduated in Metallurgy and Materials Engineering" },
+            { year: "2024", event: "Completed Frontend Web Development Course" },
+            { year: "2024", event: "Interned as a Frontend Developer" },
+        ];
+
+        const timeline = document.getElementById("timeline");
+
+        timelineData.forEach(item => {
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `<strong>${item.year}:</strong> ${item.event}`;
+            timeline.appendChild(listItem);
+        });
+
+        // Smooth Scroll functionality
+        function showPage(pageId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.page');
+            sections.forEach(section => section.classList.remove('active-page'));
+
+            // Show the selected section
+            const activePage = document.getElementById(pageId);
+            activePage.classList.add('active-page');
+        }
+
+        // Contact Form Validation
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            if (!name || !email || !message) {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            alert(`Thank you for your message, ${name}!`);
+            this.reset(); // Reset form fields
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
